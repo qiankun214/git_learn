@@ -131,8 +131,53 @@ git switch <分支名称>	  //新版本
 
 ## 合并分支
 
+### 快速合并模式（无合并记录）
+
 ```bash
-git merge dev
+git merge <分支名称>
 ```
 
-合并分支到当前分支，对于`master`-`dev`分支对，需要首先回到`master`分支才能操作
+合并指定分支到当前分支，对于`master`-`dev`分支对，需要首先回到`master`分支才能操作
+
+### 非快速合并模式（有合并记录）
+
+```bash
+git merge --no-ff -m "<提交记录>" <分支名称>
+```
+
+此种方式合并分支到一个新提交中，有提交记录
+
+## 远程仓库
+
+### 推送分支到远程仓库
+
+```bash
+git push origin <分支名称>
+```
+
+### 拉取远程分支
+
+```bash
+git checkout -b dev origin/<分支名称>
+```
+
+该方式为从远程仓库中创建分支，已有分支后，直接在该分支下执行`git pull`即可
+
+### 链接远程分支
+
+```bash
+git branch --set-upstream-to=origin/<远程分支名称> <本地分支名称>
+```
+
+当进行`git pull`拉取分支失败提示需要链接时使用
+
+## 复制提交
+
+```bash
+git cherry-pick <commit id>
+```
+
+将指定id的提交复制到当前分支
+
+## 删除分支
+
