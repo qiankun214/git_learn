@@ -96,3 +96,34 @@ git checkout -- <文件名>   //撤销操作
 
 # Git分支操作
 
+## 创建分支
+
+```bash
+git checkout -b <分支名称>
+```
+
+该命令表示创建指定名称的分支并转向该分支，相当于以下两条指令
+
+```bash
+git branch dev		//创建分支
+git checkout dev	//转向分支
+```
+
+## 转向分支
+
+### 查看分支状态
+
+```bash
+git branch
+```
+
+列出所有分支名称，在当前分之前有`*`
+
+### 转向分支
+
+```bash
+git checkout <分支名称>
+```
+
+
+
