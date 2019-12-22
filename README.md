@@ -181,3 +181,8 @@ git cherry-pick <commit id>
 
 ## 删除分支
 
+```bash
+git branch -d <branch名称> 	//删除分支
+git branch -D <branch名称> 	//强行删除分支
+```
+
