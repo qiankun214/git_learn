@@ -69,21 +69,30 @@ git reset --hard <版本号>
 - `^`表示上一个版本，例如`HEAD^`为当前的上一个版本，`HEAD^^`为当前的上两个版本
 - `~n`表示上n个版本，例如`HEAD~10`为当前的上10个版本
 
-## Git撤销未缓存操作（未执行git add）
+## Git撤销操作
 
-### 查看工作区修改
+### 查看修改
 
 ```bash
 git status
 ```
 
-### 撤销操作
+### 撤销操作（未执行git add）
 
+```bash
+git checkout -- <文件名>
 ```
 
+该操作将指定文件恢复到上一次`git add`或`git commit`时的状态
+
+### 撤销操作（已执行git add）
+
+```bash
+git reset HEAD <文件名>   	//将操作放回工作区
+git checkout -- <文件名>   //撤销操作
 ```
 
-
+这两条操作将指定文件恢复到上一次`git commit`时的状态
 
 # Git分支操作
 
