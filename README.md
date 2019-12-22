@@ -41,3 +41,11 @@ git commit -m "<提交说明>"
 git push origin <分支名称>
 ```
 
+## Git从远程仓库拉取
+
+```bash
+git pull
+```
+
+## Git回滚版本
+
